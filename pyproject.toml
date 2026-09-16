@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "escapists-agent"
+version = "0.1.0"
+description = "Inspectable screen-based movement agent for The Escapists"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.24,<3", "Pillow>=10,<13"]
+
+[project.scripts]
+escapists-agent = "escapists_agent.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["escapists_agent*"]
